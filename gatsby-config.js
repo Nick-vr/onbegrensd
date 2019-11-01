@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Onbegrensd`,
-    description: `Onbegrensd, pre-order webshop`,
+    description: `Onbegrensd, pre-order webshop voor custom made T-shirts, hoodies, sweaters en accessoires`,
     author: `Nick Van Royen`,
   },
   plugins: [
@@ -28,5 +28,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: `${process.env.SNIPCART_APIKEY}`,
+        autopop: true,
+        language: `https://raw.githubusercontent.com/snipcart/snipcart-localization/master/locales/nl.js`,
+      },
+    },
   ],
 }

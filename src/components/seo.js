@@ -1,7 +1,7 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react"
+import Helmet from "react-helmet"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -44,8 +44,24 @@ function SEO({ description, lang, meta, title }) {
           property: `og:type`,
           content: `website`,
         },
+        {
+          name: "viewport",
+          content:
+            "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no",
+        },
+        {
+          name: "keywords",
+          content:
+            "Webshop, Onbegrensd, Kledij, Kleding, Kleren, Clothing, Onbegrensd.xyz",
+        },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,700"
+        rel="stylesheet"
+      />
+      <html lang="nl" />
+    </Helmet>
   )
 }
 
