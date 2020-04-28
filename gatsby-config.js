@@ -13,6 +13,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+        ignore: [`**/.*`], // ignore files starting with a dot
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -29,12 +37,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-snipcart",
+      resolve: 'gatsby-plugin-snipcartv3',
       options: {
         apiKey: `${process.env.SNIPCART_APIKEY}`,
         autopop: true,
-        language: `https://raw.githubusercontent.com/snipcart/snipcart-localization/master/locales/nl.js`,
+        // language: `https://raw.githubusercontent.com/snipcart/snipcart-localization/master/locales/nl.js`,
       },
     },
   ],
-}
+};

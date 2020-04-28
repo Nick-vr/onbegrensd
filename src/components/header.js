@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-import logo from "../images/onbegrensd.png"
-import bag from "../images/checkoutbag2.png"
+import logo from '../images/onbegrensd.png'
+import bag from '../images/checkoutbag2.png'
 
 const Nav = styled.nav`
   z-index: 110;
@@ -65,16 +65,16 @@ const CheckoutLogoWrap = styled.div`
 
 const navList = [
   {
-    name: "VOOR HAAR",
-    link: "/dames",
+    name: 'VOOR HAAR',
+    link: '/dames',
   },
   {
-    name: "VOOR HEM",
-    link: "/heren",
+    name: 'VOOR HEM',
+    link: '/heren',
   },
   {
-    name: "VOOR DE KIDS",
-    link: "/kids",
+    name: 'VOOR DE KIDS',
+    link: '/kids',
   },
 ]
 
@@ -82,7 +82,7 @@ const navListItems = navList.map((item, index) => (
   <li key={index}>
     <Link
       to={item.link}
-      activeStyle={{ backgroundColor: "#000", color: "#FFF" }}
+      activeStyle={{ backgroundColor: '#000', color: '#FFF' }}
     >
       {item.name}
     </Link>

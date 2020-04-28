@@ -1,16 +1,16 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import ShopCard from "../components/shopCard"
+import Layout from '../components/layout';
+import Image from '../components/image';
+import SEO from '../components/seo';
+import ShopCard from '../components/shopCard';
 
 const PromoText = styled.h1`
   font-weight: 300;
   font-size: 1.4em;
   text-align: center;
-`
+`;
 
 const ObliqueMarking = styled.div`
   width: 300px;
@@ -27,7 +27,7 @@ const ObliqueMarking = styled.div`
     text-align: center;
     transform: rotate(2deg);
   }
-`
+`;
 
 const Grid = styled.section`
   display: grid;
@@ -36,7 +36,7 @@ const Grid = styled.section`
   justify-items: center;
   padding: 0 300px;
   margin: 100px 0 100px;
-`
+`;
 
 const IndexPage = () => (
   <Layout>
@@ -50,6 +50,6 @@ const IndexPage = () => (
       <ShopCard />
     </Grid>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

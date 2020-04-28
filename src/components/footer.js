@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const Nav = styled.nav`
   z-index: 99;
@@ -46,16 +46,16 @@ const Socials = styled.div`
 
 const navList = [
   {
-    name: "Voorwaarden",
-    link: "/voorwaarden",
+    name: 'Voorwaarden',
+    link: '/voorwaarden',
   },
   {
-    name: "Levering & Retourneren",
-    link: "/levering-retourneren",
+    name: 'Levering & Retourneren',
+    link: '/levering-retourneren',
   },
   {
-    name: "Contact",
-    link: "/contact",
+    name: 'Contact',
+    link: '/contact',
   },
 ]
 
@@ -63,7 +63,7 @@ const navListItems = navList.map((item, index) => (
   <li key={index}>
     <Link
       to={item.link}
-      activeStyle={{ backgroundColor: "#000", color: "#FFF" }}
+      activeStyle={{ backgroundColor: '#000', color: '#FFF' }}
     >
       {item.name}
     </Link>

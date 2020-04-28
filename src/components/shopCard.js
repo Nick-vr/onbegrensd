@@ -1,5 +1,6 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 const ShopItem = styled.button`
   display: inline-block;
@@ -26,13 +27,13 @@ const ShopItem = styled.button`
   }
   p {
     font-size: 3em;
-    font-family: "Rajdhani", sans-serif;
+    font-family: 'Rajdhani', sans-serif;
   }
   img {
     width: 300px;
     height: 300px;
   }
-`
+`;
 
 const ShopCard = props => (
   <>
@@ -49,9 +50,10 @@ const ShopCard = props => (
       data-item-description={props.itemDesc}
     >
       <img src={props.itemImage} alt="poop" />
+      <p>yeet</p>
       <p>€ {props.itemPrice}</p>
     </ShopItem>
   </>
-)
+);
 
-export default ShopCard
+export default ShopCard;

@@ -1,10 +1,11 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
-import { Location } from "@reach/router"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
+// import { Location } from "@reach/router"
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from './header';
+import Footer from './footer';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Rajdhani', sans-serif;
-    ${"" /* min-height: calc(100vh - 10px); */}
+    ${'' /* min-height: calc(100vh - 10px); */}
     display: block;
     position: relative;
     border-top: none;
@@ -36,15 +37,15 @@ const GlobalStyle = createGlobalStyle`
   input, textarea, button {
     font-family: inherit;
   }
-`
+`;
 
 const StyledMain = styled.main`
   min-height: calc(100vh - 389px);
-`
+`;
 
-document.addEventListener("snipcart.ready", () => {
-  window.Snipcart.setLang("nl")
-})
+// document.addEventListener("snipcart.ready", () => {
+//   window.Snipcart.setLang("nl")
+// })
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -55,7 +56,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -64,7 +65,11 @@ const Layout = ({ children }) => {
       <Footer />
       <GlobalStyle />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.any,
+};
+
+export default Layout;
