@@ -26,3 +26,6 @@ yarn-error.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Eslint config
+.eslintrc
