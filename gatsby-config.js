@@ -18,9 +18,9 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
-        ignore: [`**/.*`], // ignore files starting with a dot
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

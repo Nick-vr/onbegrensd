@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import { node } from 'prop-types';
 
 const ShopItem = styled.button`
   display: inline-block;
@@ -35,24 +36,60 @@ const ShopItem = styled.button`
   }
 `;
 
-const ShopCard = props => (
-  <>
-    <ShopItem
-      className="snipcart-add-item"
-      data-item-id={props.itemId}
-      data-item-name={props.itemName}
-      data-item-price={props.itemPrice}
-      data-item-custom1-name="Size"
-      data-item-custom1-options={props.itemSize}
-      data-item-custom1-value="M"
-      data-item-image={props.itemImage}
-      data-item-url={props.itemUrl}
-      data-item-description={props.itemDesc}
-    >
-      <img src={props.itemImage} alt="poop" />
-      <p>€ {props.itemPrice}</p>
-    </ShopItem>
-  </>
-);
+const ShopCard = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: { frontmatter: { new: { eq: true } } }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              name
+              path
+              price
+              desc
+              image {
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
+              }
+              customFields {
+                name
+                required
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <ShopItem
+          className="snipcart-add-item"
+          data-item-id={node.id}
+          data-item-name={node.frontmatter.name}
+          data-item-price={node.frontmatter.price}
+          data-item-custom1-name="Size"
+          data-item-custom1-options="XS|S|M|L|XL"
+          data-item-custom1-value="M"
+          data-item-image={node.frontmatter.image.childImageSharp.fixed.src}
+          data-item-url={node.frontmatter.path}
+          data-item-description={node.frontmatter.desc}
+        >
+          <img
+            src={node.frontmatter.image.childImageSharp.fixed.src}
+            alt="poop"
+          />
+          <p>€ {node.frontmatter.price}</p>
+        </ShopItem>
+      ))}
+    </>
+  );
+};
 
 export default ShopCard;
