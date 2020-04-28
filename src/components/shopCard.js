@@ -50,7 +50,6 @@ const ShopCard = props => (
       data-item-description={props.itemDesc}
     >
       <img src={props.itemImage} alt="poop" />
-      <p>yeet</p>
       <p>€ {props.itemPrice}</p>
     </ShopItem>
   </>
