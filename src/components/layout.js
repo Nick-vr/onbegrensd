@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
@@ -43,11 +43,11 @@ const StyledMain = styled.main`
   min-height: calc(100vh - 389px);
 `;
 
-// document.addEventListener('snipcart.ready', () => {
-//   window.Snipcart.setLang('nl');
-// });
-
 const Layout = ({ children }) => {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    Snipcart.api.session.setLanguage('nl');
+  });
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -61,6 +61,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      {process.env.SNIPCART_APIKEY}
       <StyledMain>{children}</StyledMain>
       <Footer />
       <GlobalStyle />

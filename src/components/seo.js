@@ -60,13 +60,13 @@ function SEO({ description, lang, meta, title }) {
         href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,700"
         rel="stylesheet"
       />
-      <html lang="nl" />
+      {/* <html lang="nl" /> */}
     </Helmet>
   );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `nl`,
   meta: [],
   description: ``,
 };

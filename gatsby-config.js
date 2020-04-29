@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   proxy: {
     prefix: `/api`,
@@ -43,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcartv3',
       options: {
-        apiKey: `${process.env.SNIPCART_APIKEY}`,
+        apiKey: process.env.SNIPCART_API_KEY,
       },
     },
   ],
