@@ -1,4 +1,8 @@
 module.exports = {
+  proxy: {
+    prefix: `/api`,
+    url: `https://app.snipcart.com/api/sessions`,
+  },
   siteMetadata: {
     title: `Onbegrensd`,
     description: `Onbegrensd, pre-order webshop voor custom made T-shirts, hoodies, sweaters en accessoires`,
@@ -40,8 +44,6 @@ module.exports = {
       resolve: 'gatsby-plugin-snipcartv3',
       options: {
         apiKey: `${process.env.SNIPCART_APIKEY}`,
-        autopop: true,
-        // language: `https://raw.githubusercontent.com/snipcart/snipcart-localization/master/locales/nl.js`,
       },
     },
   ],

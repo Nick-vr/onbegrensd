@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { node } from 'prop-types';
 
 const ShopItem = styled.button`
   display: inline-block;
@@ -71,6 +70,7 @@ const ShopCard = () => {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <ShopItem
           className="snipcart-add-item"
+          key={node.id}
           data-item-id={node.id}
           data-item-name={node.frontmatter.name}
           data-item-price={node.frontmatter.price}

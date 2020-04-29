@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-import logo from '../images/onbegrensd.png'
-import bag from '../images/checkoutbag2.png'
+import logo from '../images/onbegrensd.png';
+import bag from '../images/checkoutbag2.png';
 
 const Nav = styled.nav`
   z-index: 110;
@@ -36,19 +36,17 @@ const Nav = styled.nav`
       }
     }
   }
-`
+`;
 
 const Checkout = styled.div`
   display: flex;
   align-self: center;
   z-index: 9999;
   margin-right: 20px;
-  a {
-    img {
-      width: 40px;
-    }
+  img {
+    width: 40px;
   }
-`
+`;
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -57,11 +55,11 @@ const StyledLink = styled(Link)`
     align-self: center;
     margin-right: 20px;
   }
-`
+`;
 
 const CheckoutLogoWrap = styled.div`
   display: flex;
-`
+`;
 
 const navList = [
   {
@@ -76,7 +74,7 @@ const navList = [
     name: 'VOOR DE KIDS',
     link: '/kids',
   },
-]
+];
 
 const navListItems = navList.map((item, index) => (
   <li key={index}>
@@ -87,18 +85,16 @@ const navListItems = navList.map((item, index) => (
       {item.name}
     </Link>
   </li>
-))
+));
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <>
     <Nav>
       <ul>{navListItems}</ul>
 
       <CheckoutLogoWrap>
-        <Checkout className="snipcart-summary">
-          <a href="/" className="snipcart-checkout">
-            <img src={bag} alt="checkout" />
-          </a>
+        <Checkout className="snipcart-checkout">
+          <img src={bag} alt="checkout" />
         </Checkout>
         <StyledLink to="/">
           <img src={logo} alt="logo" />
@@ -106,6 +102,6 @@ const Header = ({ siteTitle }) => (
       </CheckoutLogoWrap>
     </Nav>
   </>
-)
+);
 
-export default Header
+export default Header;

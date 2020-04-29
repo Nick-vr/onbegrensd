@@ -43,9 +43,9 @@ const StyledMain = styled.main`
   min-height: calc(100vh - 389px);
 `;
 
-// document.addEventListener("snipcart.ready", () => {
-//   window.Snipcart.setLang("nl")
-// })
+// document.addEventListener('snipcart.ready', () => {
+//   window.Snipcart.setLang('nl');
+// });
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

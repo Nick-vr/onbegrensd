@@ -48,6 +48,8 @@ const IndexPage = () => (
     </ObliqueMarking>
     <Grid>
       <ShopCard />
+      <ShopCard />
+      <ShopCard />
     </Grid>
   </Layout>
 );
