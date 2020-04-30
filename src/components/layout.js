@@ -61,7 +61,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      {process.env.SNIPCART_APIKEY}
       <StyledMain>{children}</StyledMain>
       <Footer />
       <GlobalStyle />
@@ -70,7 +69,7 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
