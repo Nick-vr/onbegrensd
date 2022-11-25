@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.0.5",
+    "@next/font": "^13.0.5",
     "next": "13.0.1",
+    "normalize.css": "^8.0.1",
+    "pocketbase": "^0.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

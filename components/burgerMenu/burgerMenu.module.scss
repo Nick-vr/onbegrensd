@@ -1,0 +1,129 @@
+.burger {
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  height: 20px;
+  width: 25px;
+  margin-left: 15px;
+
+  .burgerLines {
+    align-self: center;
+    background-color: var(--primaryLight);
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+
+    &Clicked {
+      @extend .burgerLines;
+      background-color: var(--primaryDark);
+    }
+  }
+
+  .burgerLines::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    background-color: var(--primaryLight);
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+    transform: rotate(0deg);
+  }
+
+  .burgerLinesClicked::before {
+    @extend .burgerLines, ::before;
+    transform: rotate(45deg);
+    top: 36px;
+    right: 29px;
+    width: 27px;
+    height: 3px;
+  }
+
+  .burgerLines::after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    background-color: var(--primaryLight);
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+    transform: rotate(0deg);
+  }
+
+  .burgerLinesClicked::after {
+    @extend .burgerLines, ::after;
+    transform: rotate(-45deg);
+    top: 36px;
+    right: 29px;
+    width: 27px;
+    height: 3px;
+  }
+}
+
+.burgerMenu {
+  z-index: 1;
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--primaryDark);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: -100vh;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+
+  &Clicked {
+    @extend .burgerMenu;
+    top: 0;
+    opacity: 1;
+  }
+
+  ul {
+    padding: 0;
+    text-align: center;
+
+    li {
+      text-transform: uppercase;
+      font-size: 3rem;
+      transition: color 0.5s ease-in-out;
+
+      &:not(.noEffect):hover {
+        color: var(--primaryHover);
+      }
+    }
+
+    a {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .shopWrapper {
+    margin: 0 auto 60px;
+    width: 110px;
+
+    ul {
+      text-align: left;
+      padding-left: 5px;
+
+      li {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+      }
+      a {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,5 +1,9 @@
+'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+// components
+// assets
+// styles
 import S from './burgerMenu.module.scss'
 
 const BurgerMenu = () => {
@@ -14,33 +18,33 @@ const BurgerMenu = () => {
 
   return (
     <>
-      <S.Burger clicked={clicked} onClick={handleClick}>
-        <div className="burger-lines"></div>
-      </S.Burger>
-      <S.BurgerMenu clicked={clicked}>
+      <div className={S.burger} onClick={handleClick}>
+        <div className={clicked ? S.burgerLinesClicked : S.burgerLines}></div>
+      </div>
+      <div className={clicked ? S.burgerMenuClicked : S.burgerMenu}>
         <ul>
           <Link href="/" onClick={handleClick}>
             <li>home</li>
           </Link>
-          <Link href="/test">
-            <li>shop</li>
-          </Link>
-          <ul>
-            <Link href="/kids">
-              <li>Hoodies</li>
-            </Link>
-            <Link href="/kids">
-              <li>Truien</li>
-            </Link>
-            <Link href="/kids">
-              <li>T-shirts</li>
-            </Link>
-          </ul>
+          <div className={S.shopWrapper}>
+            <li className={S.noEffect}>shop</li>
+            <ul>
+              <Link href="/hoodies" onClick={handleClick}>
+                <li>Hoodies</li>
+              </Link>
+              <Link href="/truien" onClick={handleClick}>
+                <li>Truien</li>
+              </Link>
+              <Link href="/t-shirts" onClick={handleClick}>
+                <li>T-shirts</li>
+              </Link>
+            </ul>
+          </div>
           <Link href="/hij">
             <li>over ons</li>
           </Link>
         </ul>
-      </S.BurgerMenu>
+      </div>
     </>
   )
 }

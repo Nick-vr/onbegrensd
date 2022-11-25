@@ -1,19 +1,6 @@
 import { createContext, ReactNode } from 'react'
+import { theme } from './globals/theme'
 
-const AppContext = createContext({})
+const AppContext = createContext(theme)
 
 export default AppContext
-
-// 'use client'
-// import { createContext, ReactNode } from 'react'
-// import { theme } from '../components/theme'
-
-// const AppContext = createContext({})
-
-// type Props = {
-//   children?: ReactNode
-// }
-
-// export default function ThemeProvider({ children }: Props) {
-//   return <AppContext.Provider value={theme}>{children}</AppContext.Provider>
-// }

@@ -1,46 +1,54 @@
-// 'use client'
-// import { useContext } from 'react'
-// import Link from 'next/link'
-// import Image from 'next/image'
-// import AppContext from '../../app/appContext'
+'use client'
+import { useContext, useEffect } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import AppContext from '../../app/appContext'
 
-// import OnbegrensdLogoLight from '../../public/onbegrensd-small-light.svg'
-// import OnbegrensdLogoDark from '../../public/onbegrensd-small-dark.svg'
-// import OnbegrensdOutlineLogoLight from '../../public/onbegrensd-logo-white.svg'
-// import OnbegrensdOutlineLogoDark from '../../public/onbegrensd-logo-black.svg'
-// import Basket from '../../public/basket.svg'
+// components
+import BurgerMenu from '../burgerMenu/burgerMenu'
+// assets
+import OnbegrensdOutlineLogoLight from '../../public/onbegrensd-logo-white.svg'
+import OnbegrensdOutlineLogoDark from '../../public/onbegrensd-logo-black.svg'
+import Basket from '../../public/basket.svg'
+// styles
+import S from './header.module.scss'
 
-// import S from './header.module.scss'
-// // import BurgerMenu from '../BurgerMenu/BurgerMenu'
+const Header = () => {
+  const theme = useContext(AppContext)
 
-// const Header = () => {
-//   const theme = useContext(AppContext)
-//   console.log(theme.primary)
-//   window.location.pathname === '/'
-//     ? (theme.primary = true)
-//     : (theme.primary = false)
+  useEffect(() => {
+    window.location.pathname === '/'
+      ? (theme.primary = true)
+      : (theme.primary = false)
+  })
 
-//   return (
-//     <header>
-//       {/* <BurgerMenu /> */}
-//       <div>
-//         <Link href="/">
-//           <Image
-//             src={
-//               theme.primary
-//                 ? OnbegrensdOutlineLogoLight
-//                 : OnbegrensdOutlineLogoDark
-//             }
-//             alt="onbegrensd"
-//             height={40}
-//           />
-//         </Link>
-//       </div>
-//       {/* <S.BasketWrapper>
-//         <Image src={Basket} alt="basket" />
-//       </S.BasketWrapper> */}
-//     </header>
-//   )
-// }
+  return (
+    <header className={theme.primary ? S.header : S.headerDark}>
+      <div className={S.logoWrapper}>
+        <Link href="/">
+          <Image
+            src={
+              theme.primary
+                ? OnbegrensdOutlineLogoLight
+                : OnbegrensdOutlineLogoDark
+            }
+            alt="onbegrensd"
+            height={40}
+            width={40}
+          />
+        </Link>
+      </div>
+      <div className={S.basketBurgerWrapper}>
+        <Image
+          className="snipcart-checkout"
+          src={Basket}
+          alt="basket"
+          width={28}
+        />
+        <BurgerMenu />
+      </div>
+    </header>
+  )
+}
 
-// export default Header
+export default Header

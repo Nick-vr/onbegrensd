@@ -1,0 +1,59 @@
+.spotlightWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin: 100px 0 50px;
+  }
+}
+
+.spotlightItemInsideWrapper {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.spotlightItem {
+  border: 1px solid var(--primaryDark);
+  width: 90vw;
+  margin-bottom: 100px;
+}
+
+.spotlightItemName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primaryDark);
+  color: var(--primaryLight);
+  font-weight: 700;
+  width: 150px;
+  height: 40px;
+}
+
+.spotlightItemPrice {
+  @extend .spotlightItemName;
+  font-size: 0.9rem;
+  width: 80px;
+  height: 30px;
+}
+
+
+.spotlightItemInfo {
+  text-align: justify;
+}
+
+
+.spotlightItemButton {
+  width: 100%;
+  height: 45px;
+  background-color: var(--primaryDark);
+  color: var(--primaryLight);
+  border: none;
+  margin: 40px 0 30px;
+}
+
+.spotlightPlaceholder {
+  @extend .spotlightItem;
+  height: 500px;
+}

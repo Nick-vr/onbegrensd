@@ -1,0 +1,39 @@
+.header {
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  padding-top: 15px;
+  color: var(--primaryLight);
+
+  &Dark {
+    @extend .header;
+    color: var(--primaryDark);
+  }
+
+  a {
+    align-self: center;
+  }
+}
+
+.logoWrapper {
+  img {
+    margin-left: 30px;
+  }
+}
+
+.basketBurgerWrapper {
+  display: flex;
+  justify-self: end;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+  padding-right: 30px;
+
+  img {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
