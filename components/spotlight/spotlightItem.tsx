@@ -10,7 +10,7 @@ const SpotlightItem = (props: { spotlight: any }) => {
   return (
     <>
       {props.spotlight.map((item: any) =>
-        item.expand.product_id.image != '' ? (
+        item.expand.product_id.image != '' || undefined ? (
           <div className={S.spotlightItem} key={item.product_id}>
             <div className={S.spotlightItemName}>
               {item.expand.product_id.name}
