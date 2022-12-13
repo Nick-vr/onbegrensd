@@ -1,9 +1,12 @@
 :root {
   --primaryLight: #cdcdcd;
+  --secondaryLight: #EDEAEA;
   --primaryDark: #0a0a0a;
   --primaryHover: #232323;
   --primary: true;
   --mobile: 576px;
+  --font-base: 'Space Grotesk';
+  --font-two: 'Rajdhani';
 }
 
 *,
@@ -14,7 +17,7 @@
 
 html,
 body {
-  // font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-base), sans-serif;
   margin: 0;
   padding: 0;
   scrollbar-width: thin;

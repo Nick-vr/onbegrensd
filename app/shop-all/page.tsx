@@ -1,6 +1,8 @@
 // components
 // assets
 // styles
-export default function ShopAllPage() {
+const ShopAllPage = () => {
   return <div>Shop All</div>
 }
+
+export default ShopAllPage

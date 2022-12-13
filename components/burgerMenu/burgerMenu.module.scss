@@ -23,7 +23,7 @@
   .burgerLines::before {
     content: '';
     position: absolute;
-    top: 25px;
+    top: 27px;
     right: 40px;
     background-color: var(--primaryLight);
     width: 15px;
@@ -67,7 +67,7 @@
 
 .burgerMenu {
   z-index: 1;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-two), sans-serif;
   background-color: var(--primaryDark);
   display: flex;
   position: absolute;

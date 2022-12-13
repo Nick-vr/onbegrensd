@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #222222;
+  padding: 40px;
+}
+
+.nav {
+    margin-top: 40px;
+
+  ul {
+    li {
+      color: var(--primaryLight);
+      font-size: 1.2rem;
+    }
+
+    a {
+      display: block;
+
+      :not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

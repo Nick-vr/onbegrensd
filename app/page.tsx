@@ -11,7 +11,7 @@ import ArrowDown from '../public/arrow-down.svg'
 // styles
 import S from './page.module.scss'
 
-export default function Home() {
+const Home = () => {
   // const fetchData = async () => {
   //   // const authData = await pb.admins.authWithPassword(
   //   //   pocketbaseEmail,
@@ -45,12 +45,12 @@ export default function Home() {
           <ShopButton />
         </div>
         <div className={S.arrowDownWrapper}>
-          <Link href="/#spotlight">
+          <a href="/#spotlight">
             <span>
               <h4>Spotlight</h4>
               <Image src={ArrowDown} alt="arrow down" />
             </span>
-          </Link>
+          </a>
         </div>
         <div className={S.heroBackground}></div>
       </section>
@@ -60,3 +60,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

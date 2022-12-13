@@ -1,6 +1,8 @@
 // components
 // assets
 // styles
-export default function TruienPage() {
+const TruienPage = () => {
   return <div>Truien</div>
 }
+
+export default TruienPage

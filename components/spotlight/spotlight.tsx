@@ -29,7 +29,7 @@ const Spotlight = () => {
 
   return (
     <section className={S.spotlightWrapper}>
-      <h3 id="spotlight">In de spotlight</h3>
+      <div id="spotlight" className={S.spotlight} />
       {loading ? <LoadingSpotlight /> : <SpotlightItem spotlight={spotlight} />}
     </section>
   )

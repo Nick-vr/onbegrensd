@@ -1,6 +1,8 @@
 // components
 // assets
 // styles
-export default function HoodiesPage() {
+const HoodiesPage = () => {
   return <div>Hoodies</div>
 }
+
+export default HoodiesPage 

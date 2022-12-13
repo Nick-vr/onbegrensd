@@ -1,6 +1,8 @@
 // components
 // assets
 // styles
-export default function VaultPage() {
+const VaultPage = () => {
   return <div>login</div>
 }
+
+export default VaultPage

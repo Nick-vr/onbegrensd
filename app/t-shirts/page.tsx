@@ -1,6 +1,8 @@
 // components
 // assets
 // styles
-export default function TshirtsPage() {
+const TshirtsPage = () => {
   return <div>T-shirts</div>
 }
+
+export default TshirtsPage

@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-base), sans-serif;
 
-  h3 {
-    margin: 100px 0 50px;
-  }
+  
+}
+.spotlight {
+  margin: 100px 0;
 }
 
 .spotlightItemInsideWrapper {
@@ -15,17 +17,17 @@
 }
 
 .spotlightItem {
-  border: 1px solid var(--primaryDark);
+  background-color: var(--secondaryLight);
   width: 90vw;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .spotlightItemName {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primaryDark);
-  color: var(--primaryLight);
+  background-color: white;
+  color: var(----primaryDark);
   font-weight: 700;
   width: 150px;
   height: 40px;
@@ -47,8 +49,8 @@
 .spotlightItemButton {
   width: 100%;
   height: 45px;
-  background-color: var(--primaryDark);
-  color: var(--primaryLight);
+  background-color: white;
+  color: var(--primaryDark);
   border: none;
   margin: 40px 0 30px;
 }
