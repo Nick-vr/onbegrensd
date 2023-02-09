@@ -95,9 +95,12 @@
       font-size: 3rem;
       transition: color 0.5s ease-in-out;
 
-      &:not(.noEffect):hover {
+      &:hover {
         color: var(--primaryHover);
       }
+      // &:not(.noEffect):hover {
+      //   color: var(--primaryHover);
+      // }
     }
 
     a {
@@ -124,6 +127,9 @@
       a {
         margin-bottom: 10px;
       }
+    }
+    .noMargin {
+      margin: 0;
     }
   }
 }

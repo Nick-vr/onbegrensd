@@ -1,12 +1,14 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
+import AppContext from '../../app/appContext'
 // components
 // assets
 // styles
 import S from './burgerMenu.module.scss'
 
 const BurgerMenu = () => {
+  const theme = useContext(AppContext)
   const [clicked, setClicked] = useState(false)
   const handleClick = () => setClicked(!clicked)
 
@@ -27,16 +29,22 @@ const BurgerMenu = () => {
             <li>home</li>
           </Link>
           <div className={S.shopWrapper}>
-            <li className={S.noEffect}>shop</li>
+            <Link className={S.noMargin} href="/shop-all" onClick={handleClick}>
+              <li>shop</li>
+            </Link>
+
             <ul>
               <Link href="/hoodies" onClick={handleClick}>
                 <li>Hoodies</li>
               </Link>
-              <Link href="/truien" onClick={handleClick}>
-                <li>Truien</li>
+              <Link href="/sweaters" onClick={handleClick}>
+                <li>Sweaters</li>
               </Link>
               <Link href="/t-shirts" onClick={handleClick}>
                 <li>T-shirts</li>
+              </Link>
+              <Link href="/custom" onClick={handleClick}>
+                <li>Custom</li>
               </Link>
             </ul>
           </div>

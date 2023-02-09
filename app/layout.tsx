@@ -26,8 +26,15 @@ export default function RootLayout({ children, title = 'ONBEGRENSD' }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="/favicon-16x16.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet" /> 
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Space+Grotesk:wght@300&display=swap"
+          rel="stylesheet"
+        />
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link

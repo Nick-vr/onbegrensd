@@ -1,5 +1,5 @@
 .footer {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #222222;
@@ -7,12 +7,24 @@
 }
 
 .nav {
-    margin-top: 40px;
+  margin-top: 40px;
 
   ul {
+    padding: 0;
     li {
       color: var(--primaryLight);
       font-size: 1.2rem;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      a {
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+          color: var(--secondaryHover);
+        }
+      }
     }
 
     a {
@@ -23,4 +35,10 @@
       }
     }
   }
+}
+
+.copyright {
+  color: var(--secondaryDark);
+  margin: 20px auto 0;
+  font-size: 0.8rem;
 }

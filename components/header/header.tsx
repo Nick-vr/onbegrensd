@@ -17,7 +17,7 @@ const Header = () => {
   const theme = useContext(AppContext)
 
   useEffect(() => {
-    window.location.pathname === '/'
+    window.location.pathname === ''
       ? (theme.primary = true)
       : (theme.primary = false)
   })
