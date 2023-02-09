@@ -38,9 +38,9 @@ const Home = () => {
       <section className={S.heroSection}>
         <div className={S.heroTextWrapper}>
           <h3>
-            Wat je niet wist
+            Onbegrensde keuzes
             <br />
-            dat je nodig had
+            kies zelf wat je wil
           </h3>
           <ShopButton />
         </div>
