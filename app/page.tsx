@@ -1,7 +1,5 @@
 'use client'
 import Image from 'next/image'
-import { useEffect } from 'react'
-import Link from 'next/link'
 
 // components
 import ShopButton from '../components/shopButton/shopButton'
@@ -12,27 +10,6 @@ import ArrowDown from '../public/arrow-down.svg'
 import S from './page.module.scss'
 
 const Home = () => {
-  // const fetchData = async () => {
-  //   // const authData = await pb.admins.authWithPassword(
-  //   //   pocketbaseEmail,
-  //   //   pocketbasePass
-  //   // )
-  //   const result = await pb
-  //     .collection('product')
-  //     .getFullList(200 /* batch size */, {
-  //       sort: '-created',
-  //     })
-
-  //   console.log(pb.authStore.isValid)
-  //   console.log(pb.authStore.model)
-  //   console.log(result)
-  // }
-  // useEffect(() => {
-  //   // call the function
-  //   fetchData()
-  //     // make sure to catch any error
-  //     .catch(console.error)
-  // }, [])
   return (
     <>
       <section className={S.heroSection}>

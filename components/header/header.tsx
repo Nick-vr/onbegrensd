@@ -2,6 +2,7 @@
 import { useContext, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import AppContext from '../../app/appContext'
 
 // components
@@ -15,11 +16,10 @@ import S from './header.module.scss'
 
 const Header = () => {
   const theme = useContext(AppContext)
+  const pathname = usePathname()
 
   useEffect(() => {
-    window.location.pathname === ''
-      ? (theme.primary = true)
-      : (theme.primary = false)
+    pathname === '/' ? (theme.primary = true) : (theme.primary = false)
   })
 
   return (
@@ -29,8 +29,8 @@ const Header = () => {
           <Image
             src={
               theme.primary
-                ? OnbegrensdOutlineLogoLight
-                : OnbegrensdOutlineLogoDark
+                ? OnbegrensdOutlineLogoDark
+                : OnbegrensdOutlineLogoLight
             }
             alt="onbegrensd"
             height={40}

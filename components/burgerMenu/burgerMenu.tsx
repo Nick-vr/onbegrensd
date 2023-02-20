@@ -6,6 +6,32 @@ import AppContext from '../../app/appContext'
 // assets
 // styles
 import S from './burgerMenu.module.scss'
+// import { theme } from '../../app/globals/theme'
+
+type Props = {
+  clicked?: boolean
+  handleClick: Function
+}
+
+const BurgerLinesLight = ({ clicked, handleClick }: Props) => {
+  return (
+    <>
+      <div className={S.burger} onClick={handleClick}>
+        <div className={clicked ? S.burgerLinesClicked : S.burgerLines}></div>
+      </div>
+    </>
+  )
+}
+
+const BurgerLinesDark = ({ clicked, handleClick }: Props) => {
+  return (
+    <>
+      <div className={S.burger} onClick={handleClick}>
+        <div className={clicked ? S.burgerLinesDark : S.burgerLines}></div>
+      </div>
+    </>
+  )
+}
 
 const BurgerMenu = () => {
   const theme = useContext(AppContext)
@@ -20,9 +46,12 @@ const BurgerMenu = () => {
 
   return (
     <>
-      <div className={S.burger} onClick={handleClick}>
-        <div className={clicked ? S.burgerLinesClicked : S.burgerLines}></div>
-      </div>
+      {theme.primary ? (
+        <BurgerLinesLight clicked={clicked} handleClick={handleClick} />
+      ) : (
+        <BurgerLinesDark clicked={clicked} handleClick={handleClick} />
+      )}
+
       <div className={clicked ? S.burgerMenuClicked : S.burgerMenu}>
         <ul>
           <Link href="/" onClick={handleClick}>

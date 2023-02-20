@@ -20,6 +20,11 @@
     }
   }
 
+  .burgerLinesDark {
+    @extend .burgerLines;
+    background-color: var(--primaryDark);
+  }
+
   .burgerLines::before {
     content: '';
     position: absolute;
