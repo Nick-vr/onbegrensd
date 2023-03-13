@@ -5,4 +5,4 @@ const HoodiesPage = () => {
   return <div>Hoodies</div>
 }
 
-export default HoodiesPage 
+export default HoodiesPage

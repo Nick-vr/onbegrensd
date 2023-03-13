@@ -2,8 +2,9 @@
 import Image from 'next/image'
 
 // components
-import ShopButton from '../components/shopButton/shopButton'
+import ShopButtons from '../components/shopButtons/shopButtons'
 import Spotlight from '../components/spotlight/spotlight'
+import Glitch from '../components/glitch/glitch'
 // assets
 import ArrowDown from '../public/arrow-down.svg'
 // styles
@@ -13,13 +14,8 @@ const Home = () => {
   return (
     <>
       <section className={S.heroSection}>
-        <div className={S.heroTextWrapper}>
-          <h3>
-            Onbegrensde keuzes
-            <br />
-            kies zelf wat je wil
-          </h3>
-          <ShopButton />
+        <div className={S.heroButtonsWrapper}>
+          <ShopButtons />
         </div>
         <div className={S.arrowDownWrapper}>
           <a href="/#spotlight">
@@ -31,6 +27,7 @@ const Home = () => {
         </div>
         <div className={S.heroBackground}></div>
       </section>
+      <Glitch />
       <div className={S.wrapper}>
         <Spotlight />
       </div>

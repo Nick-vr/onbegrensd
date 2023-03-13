@@ -2,11 +2,17 @@
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import AppContext from '../../app/appContext'
+import { Rajdhani } from '@next/font/google'
 // components
 // assets
 // styles
 import S from './burgerMenu.module.scss'
 // import { theme } from '../../app/globals/theme'
+
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
+  weight: '300',
+})
 
 type Props = {
   clicked?: boolean
@@ -53,7 +59,7 @@ const BurgerMenu = () => {
       )}
 
       <div className={clicked ? S.burgerMenuClicked : S.burgerMenu}>
-        <ul>
+        <ul className={rajdhani.className}>
           <Link href="/" onClick={handleClick}>
             <li>home</li>
           </Link>
