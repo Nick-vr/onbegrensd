@@ -7,6 +7,7 @@ import OnbegrensdLogo from '../../public/onbegrensd.svg'
 import S from './footer.module.scss'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className={S.footer}>
       <Link href="/">
@@ -24,6 +25,13 @@ const Footer = () => {
             <Link href="/contact">Contact</Link>
           </li>
           <li>
+            <Link href="/over-ons">Over ons</Link>
+          </li>
+
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
             <Link href="/gebruiksvoorwaarden">Gebruiksvoorwaarden</Link>
           </li>
           <li>
@@ -36,6 +44,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
+      <div className={S.copyright}>&#169; {currentYear}</div>
     </footer>
   )
 }

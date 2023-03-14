@@ -20,6 +20,11 @@
     }
   }
 
+  .burgerLinesDark {
+    @extend .burgerLines;
+    background-color: var(--primaryDark);
+  }
+
   .burgerLines::before {
     content: '';
     position: absolute;
@@ -67,7 +72,6 @@
 
 .burgerMenu {
   z-index: 1;
-  font-family: var(--font-two), sans-serif;
   background-color: var(--primaryDark);
   display: flex;
   position: absolute;
@@ -95,9 +99,12 @@
       font-size: 3rem;
       transition: color 0.5s ease-in-out;
 
-      &:not(.noEffect):hover {
+      &:hover {
         color: var(--primaryHover);
       }
+      // &:not(.noEffect):hover {
+      //   color: var(--primaryHover);
+      // }
     }
 
     a {
@@ -124,6 +131,9 @@
       a {
         margin-bottom: 10px;
       }
+    }
+    .noMargin {
+      margin: 0;
     }
   }
 }

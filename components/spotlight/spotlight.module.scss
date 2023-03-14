@@ -2,9 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--font-base), sans-serif;
-
-  
 }
 .spotlight {
   margin: 100px 0;
@@ -40,11 +37,9 @@
   height: 30px;
 }
 
-
 .spotlightItemInfo {
   text-align: justify;
 }
-
 
 .spotlightItemButton {
   width: 100%;

@@ -1,12 +1,14 @@
+@import './snipcart.css';
+
 :root {
   --primaryLight: #cdcdcd;
-  --secondaryLight: #EDEAEA;
+  --secondaryLight: #edeaea;
   --primaryDark: #0a0a0a;
+  --secondaryDark: #969696;
   --primaryHover: #232323;
+  --secondaryHover: #444444;
   --primary: true;
   --mobile: 576px;
-  --font-base: 'Space Grotesk';
-  --font-two: 'Rajdhani';
 }
 
 *,
@@ -17,7 +19,6 @@
 
 html,
 body {
-  font-family: var(--font-base), sans-serif;
   margin: 0;
   padding: 0;
   scrollbar-width: thin;

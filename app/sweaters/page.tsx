@@ -1,8 +1,8 @@
 // components
 // assets
 // styles
-const TruienPage = () => {
+const SweatersPage = () => {
   return <div>Truien</div>
 }
 
-export default TruienPage
+export default SweatersPage

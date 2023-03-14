@@ -1,48 +1,21 @@
 'use client'
 import Image from 'next/image'
-import { useEffect } from 'react'
-import Link from 'next/link'
 
 // components
-import ShopButton from '../components/shopButton/shopButton'
+import ShopButtons from '../components/shopButtons/shopButtons'
 import Spotlight from '../components/spotlight/spotlight'
+import Glitch from '../components/glitch/glitch'
 // assets
 import ArrowDown from '../public/arrow-down.svg'
 // styles
 import S from './page.module.scss'
 
 const Home = () => {
-  // const fetchData = async () => {
-  //   // const authData = await pb.admins.authWithPassword(
-  //   //   pocketbaseEmail,
-  //   //   pocketbasePass
-  //   // )
-  //   const result = await pb
-  //     .collection('product')
-  //     .getFullList(200 /* batch size */, {
-  //       sort: '-created',
-  //     })
-
-  //   console.log(pb.authStore.isValid)
-  //   console.log(pb.authStore.model)
-  //   console.log(result)
-  // }
-  // useEffect(() => {
-  //   // call the function
-  //   fetchData()
-  //     // make sure to catch any error
-  //     .catch(console.error)
-  // }, [])
   return (
     <>
       <section className={S.heroSection}>
-        <div className={S.heroTextWrapper}>
-          <h3>
-            Wat je niet wist
-            <br />
-            dat je nodig had
-          </h3>
-          <ShopButton />
+        <div className={S.heroButtonsWrapper}>
+          <ShopButtons />
         </div>
         <div className={S.arrowDownWrapper}>
           <a href="/#spotlight">
@@ -54,6 +27,7 @@ const Home = () => {
         </div>
         <div className={S.heroBackground}></div>
       </section>
+      <Glitch />
       <div className={S.wrapper}>
         <Spotlight />
       </div>
