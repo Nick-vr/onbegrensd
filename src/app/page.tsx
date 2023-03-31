@@ -26,8 +26,8 @@ const Home = () => {
           </a>
         </div>
         <div className={S.heroBackground}></div>
+        <Glitch />
       </section>
-      <Glitch />
       <div className={S.wrapper}>
         <Spotlight />
       </div>

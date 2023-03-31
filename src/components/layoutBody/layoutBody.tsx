@@ -16,11 +16,13 @@ type Props = {
 export default function LayoutBody({ children }: Props) {
   return (
     <>
-      <AppContext.Provider value={theme}>
-        <Header />
-        <main style={{ overflowX: 'hidden' }}>{children}</main>
-        <Footer />
-      </AppContext.Provider>
+      <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <AppContext.Provider value={theme}>
+          <Header />
+          <main style={{ overflowX: 'hidden' }}>{children}</main>
+          <Footer />
+        </AppContext.Provider>
+      </div>
       <Script src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js" />
       <div
         hidden
