@@ -1,7 +1,7 @@
 'use client'
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
-import AppContext from '../../app/appContext'
+import AppContext from '@/app/appContext'
 import { Rajdhani } from '@next/font/google'
 // components
 // assets

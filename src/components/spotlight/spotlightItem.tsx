@@ -2,7 +2,7 @@ import Image from 'next/image'
 import S from './spotlight.module.scss'
 // components
 // assets
-import placeholder from '../../public/placeholder.png'
+import placeholder from '@/public/placeholder.png'
 // styles
 
 const SpotlightItem = (props: { spotlight: any }) => {

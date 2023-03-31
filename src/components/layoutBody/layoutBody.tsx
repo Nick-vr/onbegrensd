@@ -1,13 +1,13 @@
 'use client'
 import { ReactNode } from 'react'
 import Script from 'next/script'
-import AppContext from '../../app/appContext'
+import AppContext from '@/app/appContext'
 
 // components
-import Header from '../../components/header/header'
-import Footer from '../../components/footer/footer'
+import Header from '@/components/header/header'
+import Footer from '@/components/footer/footer'
 // assets
-import { theme } from '../../app/globals/theme'
+import { theme } from '@/app/globals/theme'
 // styles
 
 type Props = {

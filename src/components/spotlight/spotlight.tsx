@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import pb from '../../utils/initPocketbase'
+import pb from 'src/utils/initPocketbase'
 
 // components
 // assets

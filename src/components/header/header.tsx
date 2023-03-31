@@ -3,14 +3,14 @@ import { useContext, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import AppContext from '../../app/appContext'
+import AppContext from '@/app/appContext'
 
 // components
 import BurgerMenu from '../burgerMenu/burgerMenu'
 // assets
-import OnbegrensdOutlineLogoLight from '../../public/onbegrensd-logo-white.svg'
-import OnbegrensdOutlineLogoDark from '../../public/onbegrensd-logo-black.svg'
-import Basket from '../../public/basket.svg'
+import OnbegrensdOutlineLogoLight from '@/public/onbegrensd-logo-white.svg'
+import OnbegrensdOutlineLogoDark from '@/public/onbegrensd-logo-black.svg'
+import Basket from '@/public/basket.svg'
 // styles
 import S from './header.module.scss'
 

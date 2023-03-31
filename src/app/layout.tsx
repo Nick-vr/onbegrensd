@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { Space_Grotesk } from '@next/font/google'
 
 // components
-import LayoutBody from '../components/layoutBody/layoutBody'
+import LayoutBody from '@/components/layoutBody/layoutBody'
 // assets
 // styles
 import 'normalize.css/normalize.css'

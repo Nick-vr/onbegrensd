@@ -2,11 +2,11 @@
 import Image from 'next/image'
 
 // components
-import ShopButtons from '../components/shopButtons/shopButtons'
-import Spotlight from '../components/spotlight/spotlight'
-import Glitch from '../components/glitch/glitch'
+import ShopButtons from '@/components/shopButtons/shopButtons'
+import Spotlight from '@/components/spotlight/spotlight'
+import Glitch from '@/components/glitch/glitch'
 // assets
-import ArrowDown from '../public/arrow-down.svg'
+import ArrowDown from '@/public/arrow-down.svg'
 // styles
 import S from './page.module.scss'
 

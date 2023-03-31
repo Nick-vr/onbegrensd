@@ -1,7 +1,7 @@
 import Image from 'next/image'
 // components
 // assets
-import Trui from '../../public/trui.png'
+import Trui from '@/public/trui.png'
 // styles
 import S from './spotlight.module.scss'
 

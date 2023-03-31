@@ -1,7 +1,7 @@
 import Image from 'next/image'
 // components
 // assets
-import Selfie from '../../public/custom-selfie.svg'
+import Selfie from '@/public/custom-selfie.svg'
 // styles
 import S from './custom.module.scss'
 

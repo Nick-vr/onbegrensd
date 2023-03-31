@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 // components
 // assets
-import OnbegrensdLogo from '../../public/onbegrensd.svg'
+import OnbegrensdLogo from '@/public/onbegrensd.svg'
 // styles
 import S from './footer.module.scss'
 

@@ -13,9 +13,9 @@ const ShopButton = () => {
       </Link>
       <Link href="/custom">
         <button className={S.shopButton}>
-          shop
+          Creëer
           <br />
-          onbegrensd
+          zelf
         </button>
       </Link>
     </>
