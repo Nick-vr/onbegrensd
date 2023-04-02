@@ -17,12 +17,13 @@ const rajdhani = Rajdhani({
 type Props = {
   clicked?: boolean
   handleClick: Function
+  dark?: boolean
 }
 
 const BurgerLinesLight = ({ clicked, handleClick }: Props) => {
   return (
     <>
-      <div className={S.burger} onClick={handleClick}>
+      <div className={S.burger} onClick={() => handleClick()}>
         <div className={clicked ? S.burgerLinesClicked : S.burgerLines}></div>
       </div>
     </>
@@ -32,17 +33,19 @@ const BurgerLinesLight = ({ clicked, handleClick }: Props) => {
 const BurgerLinesDark = ({ clicked, handleClick }: Props) => {
   return (
     <>
-      <div className={S.burger} onClick={handleClick}>
-        <div className={clicked ? S.burgerLinesDark : S.burgerLines}></div>
+      <div className={S.burger} onClick={() => handleClick()}>
+        <div
+          className={clicked ? S.burgerLinesClicked : S.burgerLinesDark}
+        ></div>
       </div>
     </>
   )
 }
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ clicked, handleClick, dark }: Props) => {
   const theme = useContext(AppContext)
-  const [clicked, setClicked] = useState(false)
-  const handleClick = () => setClicked(!clicked)
+  // const [clicked, setClicked] = useState(false)
+  // const handleClick = () => setClicked(!clicked)
 
   useEffect(() => {
     clicked
@@ -52,7 +55,7 @@ const BurgerMenu = () => {
 
   return (
     <>
-      {theme.primary ? (
+      {dark ? (
         <BurgerLinesLight clicked={clicked} handleClick={handleClick} />
       ) : (
         <BurgerLinesDark clicked={clicked} handleClick={handleClick} />
@@ -60,25 +63,29 @@ const BurgerMenu = () => {
 
       <div className={clicked ? S.burgerMenuClicked : S.burgerMenu}>
         <ul className={rajdhani.className}>
-          <Link href="/" onClick={handleClick}>
+          <Link href="/" onClick={() => handleClick()}>
             <li>home</li>
           </Link>
           <div className={S.shopWrapper}>
-            <Link className={S.noMargin} href="/shop-all" onClick={handleClick}>
+            <Link
+              className={S.noMargin}
+              href="/shop-all"
+              onClick={() => handleClick()}
+            >
               <li>shop</li>
             </Link>
 
             <ul>
-              <Link href="/hoodies" onClick={handleClick}>
+              <Link href="/hoodies" onClick={() => handleClick()}>
                 <li>Hoodies</li>
               </Link>
-              <Link href="/sweaters" onClick={handleClick}>
+              <Link href="/sweaters" onClick={() => handleClick()}>
                 <li>Sweaters</li>
               </Link>
-              <Link href="/t-shirts" onClick={handleClick}>
+              <Link href="/t-shirts" onClick={() => handleClick()}>
                 <li>T-shirts</li>
               </Link>
-              <Link href="/custom" onClick={handleClick}>
+              <Link href="/custom" onClick={() => handleClick()}>
                 <li>Custom</li>
               </Link>
             </ul>

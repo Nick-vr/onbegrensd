@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import S from './spotlight.module.scss'
 // components
 // assets
 import placeholder from '@/public/placeholder.png'
 // styles
+import S from './spotlight.module.scss'
 
 const SpotlightItem = (props: { spotlight: any }) => {
   const imageUrl = 'https://onbegrensd-backend.fly.dev/api/files'

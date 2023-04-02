@@ -38,13 +38,9 @@
     transform: rotate(0deg);
   }
 
-  .burgerLinesClicked::before {
-    @extend .burgerLines, ::before;
-    transform: rotate(45deg);
-    top: 36px;
-    right: 29px;
-    width: 27px;
-    height: 3px;
+  .burgerLinesDark::before {
+    @extend .burgerLines;
+    background-color: var(--primaryDark);
   }
 
   .burgerLines::after {
@@ -58,6 +54,20 @@
     border-radius: 2px;
     transition: 0.4s;
     transform: rotate(0deg);
+  }
+
+  .burgerLinesDark::after {
+    @extend .burgerLines;
+    background-color: var(--primaryDark);
+  }
+
+  .burgerLinesClicked::before {
+    @extend .burgerLines, ::before;
+    transform: rotate(45deg);
+    top: 36px;
+    right: 29px;
+    width: 27px;
+    height: 3px;
   }
 
   .burgerLinesClicked::after {

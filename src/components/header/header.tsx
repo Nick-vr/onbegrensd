@@ -1,9 +1,9 @@
 'use client'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import AppContext from '@/app/appContext'
+// import AppContext from '@/app/appContext'
 
 // components
 import BurgerMenu from '../burgerMenu/burgerMenu'
@@ -15,23 +15,21 @@ import Basket from '@/public/basket.svg'
 import S from './header.module.scss'
 
 const Header = () => {
-  const theme = useContext(AppContext)
   const pathname = usePathname()
+  const [dark, setDark] = useState(false)
+  const [clicked, setClicked] = useState(false)
+  const handleClick = () => setClicked(!clicked)
 
   useEffect(() => {
-    pathname === '/' ? (theme.primary = true) : (theme.primary = false)
+    pathname === '/' ? setDark(true) : setDark(false)
   })
 
   return (
-    <header className={theme.primary ? S.header : S.headerDark}>
+    <header className={S.header}>
       <div className={S.logoWrapper}>
         <Link href="/">
           <Image
-            src={
-              theme.primary
-                ? OnbegrensdOutlineLogoDark
-                : OnbegrensdOutlineLogoLight
-            }
+            src={dark ? OnbegrensdOutlineLogoLight : OnbegrensdOutlineLogoDark}
             alt="onbegrensd"
             height={40}
             width={40}
@@ -40,12 +38,14 @@ const Header = () => {
       </div>
       <div className={S.basketBurgerWrapper}>
         <Image
-          className="snipcart-checkout"
+          className={
+            dark ? `snipcart-checkout` : `snipcart-checkout ${S.checkout}`
+          }
           src={Basket}
           alt="basket"
           width={28}
         />
-        <BurgerMenu />
+        <BurgerMenu clicked={clicked} handleClick={handleClick} dark={dark} />
       </div>
     </header>
   )
