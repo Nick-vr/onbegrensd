@@ -3,7 +3,7 @@ import pb from 'src/utils/initPocketbase'
 
 // components
 // assets
-import SpotlightItem from './spotlightItem'
+import SpotlightItems from './spotlightItems'
 import LoadingSpotlight from './loadingSpotlight'
 // styles
 import S from './spotlight.module.scss'
@@ -30,7 +30,11 @@ const Spotlight = () => {
   return (
     <section className={S.spotlightWrapper}>
       <div id="spotlight" className={S.spotlight} />
-      {loading ? <LoadingSpotlight /> : <SpotlightItem spotlight={spotlight} />}
+      {loading ? (
+        <LoadingSpotlight />
+      ) : (
+        <SpotlightItems spotlight={spotlight} />
+      )}
     </section>
   )
 }
