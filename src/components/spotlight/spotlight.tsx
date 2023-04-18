@@ -18,7 +18,6 @@ const Spotlight = () => {
       .getFullList(200 /* batch size */, {
         expand: 'product_id',
       })
-    console.log(records)
     setSpotlight(records)
     setLoading(false)
   }

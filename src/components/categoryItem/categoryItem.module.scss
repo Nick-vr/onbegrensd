@@ -1,15 +1,17 @@
 .card {
   border: 0;
   width: 320px;
-}
-
-.containerCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid transparent;
   background: #fff;
   background-clip: padding-box;
+  margin-bottom: 100px;
+
+  @media (min-width: 1100px) {
+    margin-bottom: 0px;
+  }
 
   h5 {
     text-align: center;
@@ -27,45 +29,65 @@
     display: block;
     margin: 0 auto;
   }
-}
 
-.sizeWrapper {
-  // background-color: lightblue;
-  width: 90%;
-  .sizeText {
-    display: block;
-    text-transform: uppercase;
-    margin-bottom: 10px !important;
-  }
+  .wrapper {
+    width: 90%;
 
-  .sizeListWrapper {
-    display: flex;
-
-    :not(:last-child) {
-      margin-right: 30px;
+    .text {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 10px !important;
     }
 
-    .size {
-      display: grid;
-      place-items: center;
-      font-weight: 300;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: 1px solid var(--primaryLight);
+    .listWrapper {
+      display: flex;
+      margin-bottom: 30px;
 
-      span {
-        font-size: 0.8rem;
+      :not(:last-child) {
+        margin-right: 20px;
+      }
+
+      .size {
+        display: grid;
+        place-items: center;
+        font-weight: 300;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid var(--primaryLight);
+
+        &Clicked {
+          @extend .size;
+          background-color: var(--primaryDark);
+        }
+
+        span {
+          cursor: pointer;
+          font-size: 0.8rem;
+        }
+      }
+
+      .color {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+
+        .colorHover {
+          display: none;
+        }
       }
     }
   }
-}
 
-.colorWrapper {
-  .colorText {
-    display: block;
-    text-transform: uppercase;
-    margin-bottom: 10px !important;
+  .button {
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    background-color: var(--primaryDark);
+    color: var(--primaryLight);
+    height: 40px;
+    width: 90%;
+    margin-bottom: 15px;
   }
 }
 

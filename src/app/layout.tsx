@@ -19,6 +19,7 @@ type Props = {
 export const metadata = {
   title: 'ONBGRENSD',
   description: 'onbegrensd custom clothing webshop',
+  keywords: 'onbegrensd, webshop, clothing, custom, kleding',
   icons: {
     icon: '/favicon-16x16.png',
     shortcut: '/favicon-16x16.png',
@@ -27,8 +28,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="nl" className={spaceGrotesk.className}>
-      <body>
+    <html lang="nl">
+      <body className={spaceGrotesk.className}>
         <LayoutBody children={children} />
       </body>
     </html>

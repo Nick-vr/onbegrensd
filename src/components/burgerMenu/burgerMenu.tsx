@@ -90,7 +90,7 @@ const BurgerMenu = ({ clicked, handleClick, dark }: Props) => {
               </Link>
             </ul>
           </div>
-          <Link href="/hij">
+          <Link href="/over-ons">
             <li>over ons</li>
           </Link>
         </ul>
